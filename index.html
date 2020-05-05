@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="icon" href="favicon.ico" type="image/ico">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        @media screen and (min-width: 485px) {
+            ul {
+                columns: 2;
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            ul {
+                columns: 3;
+            }
+        }
+
+        ul+ul {
+            border-top: 1px solid #dedede;
+            margin-top: 15px;
+            padding-top: 15px;
+        }
+
+        li {
+            margin: 5px 0;
+        }
+
+        li:last-child {
+            margin: 0;
+        }
+
+        li>a {
+            display: inline-block;
+            padding: 10px;
+        }
+
+        .pd {
+            padding: 20px 30px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css">
+</head>
+
+<body>
+    <div class="pd">
+        <h1>Название проекта</h1>
+        <small>Обновлено:</small>
+    </div>
+
+    <br />
+
+    <img id="qr" alt="" style="margin: 0 30px" />
+
+    <script>
+        try {
+            (function () {
+                var token = /^secure\.domain\.ru/.test(document.location.hostname)
+                    ? "lgn:pwd@"
+                    : "";
+                document.querySelector("#qr").src =
+                    "http://api.qrserver.com/v1/create-qr-code/?color=004083&bgcolor=FFFFFF&data=http://" +
+                    token +
+                    document.location.host +
+                    document.location.pathname +
+                    "&qzone=1&margin=0&size=100x100&ecc=L";
+            })();
+        } catch (e) { }
+    </script>
+
+    <h2 class="pd">Вёрстка</h2>
+
+    <ul>
+        <li>
+            <a target="_blank" href="page.html">Page</a>
+        </li>
+        <li>
+            <a target="_blank" href="#">Страница 2</a>
+        </li>
+        <li>
+            <a target="_blank" href="#">Страница 3</a>
+        </li>
+    </ul>
+
+    <hr />
+
+    <h2 class="pd">Ресурсы</h2>
+
+    <ul>
+        <li>
+            <a target="_blank" href="">Репозиторий Front-End (указать ссылку)</a>
+        </li>
+
+        <li>
+            <a target="_blank" href="#">Прототип (указать ссылку)</a>
+        </li>
+
+        <li>
+            <a target="_blank" href="#">Дизайн (указать ссылку)</a>
+        </li>
+
+        <li>
+            <a target="_blank" href="#">ТЗ (указать ссылку)</a>
+        </li>
+    </ul>
+
+    <h3 class="pd">Публичные методы</h3>
+
+    <pre>
+        <code class="language-js">
+            
+        </code>
+    </pre>
+
+
+    <div class="">
+        <p class="test1">Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев
+            более менее осмысленного текста</p>
+        <p class="test2">Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев
+            более менее осмысленного текста</p>
+        <p class="test3">Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев
+            более менее осмысленного текста</p>
+    </div>
+
+
+
+    <div class="block-2">
+        <svg class="icon">
+            <use xlink:href="/assets/svg-sprite.svg#webpack"></use>
+        </svg>
+    </div>
+
+    <div>
+        <p class="red">Этот текст</p>
+    </div>
+
+</body>
+
+</html>

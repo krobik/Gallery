@@ -1,0 +1,70 @@
+.main {
+    color: $primary-color;
+}
+
+.red {
+    color: green;
+    font-size: 24px;
+}
+
+.test1 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+}
+
+.test2 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+
+.test3 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+}
+
+//Gallery
+#gallery {
+    display: flex;
+    justify-content: center;
+    background-color: #cdcdcd;
+}
+
+.gallery {
+    &__wrapper {
+        overflow: hidden;
+    }
+
+    &-nav {
+        display: flex;
+        position: relative;
+        left: 0;
+        transition: 1s ease;
+
+        &__item {
+            background-color: #fff;
+            height: 200px;
+            margin: 6px;
+            cursor: pointer;
+
+            &.is-active {
+                border: 3px solid #ffff00;
+            }
+        }
+
+        &__img {
+            height: 100%;
+            object-fit: cover;
+        }
+
+        &__next,
+        &__prev {
+            font-size: 42px;
+            color: #fff;
+            padding: 0 20px;
+
+            &:hover {
+                color: #333;
+            }
+        }
+    }
+}

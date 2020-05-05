@@ -1,0 +1,91 @@
+*:hover,
+*:focus {
+    outline: none;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background-color: #fff;
+    min-height: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+ul,
+ol {
+    padding: 0;
+
+    > li {
+        list-style: none;
+
+        &::before,
+        &::after {
+            display: none;
+        }
+    }
+}
+
+button {
+    vertical-align: middle;
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    display: inline-block;
+    cursor: pointer;
+}
+
+a {
+    color: currentColor;
+    transition: color $duration;
+
+    a:focus,
+    a:active {
+        outline: none;
+    }
+
+    a:hover {
+        color: $color-sky;
+        text-decoration: none;
+    }
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    width: 100%;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    flex: 1 0 auto;
+}
+
+.none {
+    display: none;
+}
+
+.hidden {
+    position: absolute;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+}
+
+
+.wrap{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
